@@ -25,7 +25,7 @@ public class Main {
 
         List<Person> personsWorkAvailable = persons.stream().filter(p -> p.getEducation() == Education.HIGHER)
                 .filter(p -> (p.getSex() == Sex.MAN && (p.getAge() >= 18 && p.getAge() <= 65))
-                        || p.getSex() == Sex.WOMAN && (p.getAge() >= 18 && p.getAge() <= 65))
+                        || p.getSex() == Sex.WOMAN && (p.getAge() >= 18 && p.getAge() <= 60))
                 .sorted(Comparator.comparing(Person::getFamily)).toList();
     }
 }
